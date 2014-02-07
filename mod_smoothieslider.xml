@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="3.1"
+	client="site">
+	<name>Smoothie Slider</name>
+	<author>Christian Pschorr</author>
+	<creationDate>July 2004</creationDate>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>pschorr.christian@gmail.com</authorEmail>
+	<authorUrl>http://christian-pschorr.de</authorUrl>
+	<version>0.0.1</version>
+	<description>MOD_SMOOTHIESLIDER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_smoothieslider">mod_smoothieslider.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+
+	<config>
+	<fields name="params">
+		<fieldset name="basic">
+			<field
+					name="catid"
+					type="category"
+					extension="com_content"
+					multiple="true"
+					size="10"
+					default=""
+					label="JCATEGORY"
+					description="MOD_LATEST_NEWS_FIELD_CATEGORY_DESC" >
+					<option value="">JOPTION_ALL_CATEGORIES</option>
+				</field>
+
+				<field
+					name="ordering"
+					type="list"
+					default="published"
+					label="MOD_LATEST_NEWS_FIELD_ORDERING_LABEL"
+					description="MOD_LATEST_NEWS_FIELD_ORDERING_DESC">
+					<option
+						value="c_dsc">MOD_LATEST_NEWS_VALUE_RECENT_ADDED</option>
+					<option
+						value="m_dsc">MOD_LATEST_NEWS_VALUE_RECENT_MODIFIED</option>
+					<option
+						value="p_dsc">MOD_LATEST_NEWS_VALUE_RECENT_PUBLISHED</option>
+					<option
+						value="mc_dsc">MOD_LATEST_NEWS_VALUE_RECENT_TOUCHED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
